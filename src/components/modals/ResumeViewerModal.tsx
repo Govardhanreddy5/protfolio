@@ -15,11 +15,11 @@ export const ResumeViewerModal: React.FC<ResumeViewerModalProps> = ({ isOpen, on
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
-      <div className="w-full max-w-4xl bg-surface-100 border border-white/20 rounded-2xl shadow-glow-combined overflow-hidden flex flex-col h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-fadeIn overflow-hidden">
+      <div className="w-full max-w-4xl bg-surface-100 border border-white/20 rounded-2xl shadow-glow-combined overflow-hidden flex flex-col h-[88vh] max-h-[88vh]">
         
         {/* Header Actions */}
-        <div className="px-6 py-4 bg-surface-200 border-b border-white/10 flex items-center justify-between">
+        <div className="px-6 py-4 bg-surface-200 border-b border-white/10 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
               <ShieldCheck className="w-4 h-4" />
@@ -49,7 +49,7 @@ export const ResumeViewerModal: React.FC<ResumeViewerModalProps> = ({ isOpen, on
         </div>
 
         {/* Resume Content Sheet */}
-        <div className="flex-1 p-8 overflow-y-auto bg-white text-gray-900 font-sans text-xs space-y-5">
+        <div className="flex-1 min-h-0 p-6 sm:p-8 overflow-y-auto bg-white text-gray-900 font-sans text-xs space-y-5 [&::-webkit-scrollbar]:w-2.5 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-400 hover:[&::-webkit-scrollbar-thumb]:bg-gray-500 [&::-webkit-scrollbar-thumb]:rounded-full">
           
           {/* Header */}
           <div className="border-b border-gray-300 pb-3 text-center">
